@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Philosophy of Grief — Researchers & Academics</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    /* ── Variables ── */
+    :root {
+      --ink:       #1a1714;
+      --dust:      #f5f0e8;
+      --paper:     #faf7f2;
+      --warm-grey: #9e9589;
+      --muted:     #c8bfb0;
+      --accent:    #7a5c45;
+      --accent-lt: #b8957a;
+      --rule:      #d8d0c4;
+      --tag-bg:    #ede8df;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Raleway', sans-serif;
+      background: var(--paper);
+      color: var(--ink);
+      font-size: 15px;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Grain overlay ── */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 9999;
+      opacity: 0.6;
+    }
+
+    /* ── Header ── */
+    header {
+      border-bottom: 1px solid var(--rule);
+      padding: 0 clamp(1.5rem, 5vw, 5rem);
+      background: var(--dust);
+    }
+
+    .header-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.1rem 0 1rem;
+      border-bottom: 1px solid var(--rule);
+      gap: 1rem;
+    }
+
+    .site-badge {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 0.72rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--warm-grey);
+    }
+
+    .header-meta {
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      color: var(--warm-grey);
+    }
+
+    .hero {
+      padding: 4rem 0 3.5rem;
+      max-width: 820px;
+    }
+
+    .hero-eyebrow {
+      font-size: 0.72rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1.4rem;
+      font-weight: 500;
+    }
+
+    h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.8rem, 6vw, 5rem);
+      font-weight: 300;
+      line-height: 1.08;
+      letter-spacing: -0.01em;
+      color: var(--ink);
+      margin-bottom: 1.5rem;
+    }
+
+    h1 em {
+      font-style: italic;
+      color: var(--accent);
+    }
+
+    .hero-desc {
+      font-size: 1.05rem;
+      color: var(--warm-grey);
+      font-weight: 300;
+      max-width: 600px;
+      line-height: 1.8;
+    }
+
+    .hero-desc a {
+      color: var(--accent);
+      text-underline-offset: 3px;
+    }
+
+    /* ── Toolbar ── */
+    .toolbar {
+      padding: 1.6rem clamp(1.5rem, 5vw, 5rem);
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      border-bottom: 1px solid var(--rule);
+      flex-wrap: wrap;
+      background: var(--paper);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .search-wrap {
+      position: relative;
+      flex: 1;
+      min-width: 200px;
+      max-width: 380px;
+    }
+
+    .search-wrap input {
+      width: 100%;
+      background: var(--dust);
+      border: 1px solid var(--rule);
+      padding: 0.6rem 1rem 0.6rem 2.5rem;
+      font-family: 'Raleway', sans-serif;
+      font-size: 0.85rem;
+      color: var(--ink);
+      letter-spacing: 0.04em;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .search-wrap input:focus { border-color: var(--accent-lt); }
+    .search-wrap input::placeholder { color: var(--muted); }
+    .search-icon {
+      position: absolute;
+      left: 0.8rem;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--muted);
+      font-size: 0.9rem;
+      pointer-events: none;
+    }
+
+    .filters {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .filter-btn {
+      background: transparent;
+      border: 1px solid var(--rule);
+      padding: 0.45rem 0.9rem;
+      font-family: 'Raleway', sans-serif;
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--warm-grey);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .filter-btn:hover, .filter-btn.active {
+      background: var(--ink);
+      border-color: var(--ink);
+      color: var(--paper);
+    }
+
+    .count-badge {
+      margin-left: auto;
+      font-size: 0.78rem;
+      color: var(--muted);
+      letter-spacing: 0.08em;
+      white-space: nowrap;
+    }
+
+    /* ── Grid ── */
+    main {
+      padding: 3rem clamp(1.5rem, 5vw, 5rem) 5rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 1.5px;
+      background: var(--rule);
+      border: 1.5px solid var(--rule);
+    }
+
+    /* ── Card ── */
+    .card {
+      background: var(--paper);
+      padding: 2rem 2rem 1.8rem;
+      cursor: pointer;
+      transition: background 0.2s;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      position: relative;
+      animation: fadeIn 0.4s ease both;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .card:hover { background: var(--dust); }
+
+    .card-number {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      color: var(--muted);
+      margin-bottom: 1.2rem;
+    }
+
+    .card-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.65rem;
+      font-weight: 500;
+      line-height: 1.15;
+      margin-bottom: 0.3rem;
+      color: var(--ink);
+    }
+
+    .card-title {
+      font-size: 0.78rem;
+      color: var(--accent);
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      margin-bottom: 0.15rem;
+      text-transform: uppercase;
+    }
+
+    .card-institution {
+      font-size: 0.82rem;
+      color: var(--warm-grey);
+      margin-bottom: 1.2rem;
+      font-weight: 300;
+    }
+
+    .card-bio {
+      font-size: 0.875rem;
+      color: #4a4540;
+      line-height: 1.75;
+      margin-bottom: 1.4rem;
+      font-weight: 300;
+      flex: 1;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-bottom: 1.3rem;
+    }
+
+    .tag {
+      background: var(--tag-bg);
+      color: var(--warm-grey);
+      font-size: 0.68rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.3rem 0.65rem;
+      font-weight: 500;
+    }
+
+    .card-footer {
+      border-top: 1px solid var(--rule);
+      padding-top: 1rem;
+      margin-top: auto;
+    }
+
+    .pubs-label {
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 0.6rem;
+    }
+
+    .pub-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.45rem;
+    }
+
+    .pub-list li {
+      font-size: 0.8rem;
+      color: #5c5650;
+      line-height: 1.4;
+      padding-left: 1rem;
+      position: relative;
+      font-weight: 300;
+    }
+
+    .pub-list li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--muted);
+    }
+
+    .card-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      margin-top: 1rem;
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+      transition: gap 0.2s;
+    }
+    .card-link:hover { gap: 0.7rem; }
+    .card-link::after { content: '→'; }
+
+    /* ── No results ── */
+    .no-results {
+      grid-column: 1 / -1;
+      text-align: center;
+      padding: 5rem 2rem;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.4rem;
+      font-style: italic;
+      color: var(--muted);
+    }
+
+    /* ── Footer ── */
+    footer {
+      border-top: 1px solid var(--rule);
+      padding: 2rem clamp(1.5rem, 5vw, 5rem);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      background: var(--dust);
+    }
+
+    .footer-left {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1rem;
+      color: var(--warm-grey);
+      font-style: italic;
+    }
+
+    .footer-right {
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      color: var(--muted);
+    }
+
+    .footer-right a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 600px) {
+      .header-top { flex-direction: column; align-items: flex-start; }
+      .toolbar { flex-direction: column; align-items: stretch; }
+      .search-wrap { max-width: 100%; }
+      .count-badge { margin-left: 0; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-top">
+    <span class="site-badge">Philosophy of Grief</span>
+    <span class="header-meta">A researcher directory · Based on the GriefYork bibliography</span>
+  </div>
+  <div class="hero">
+    <p class="hero-eyebrow">Academic Directory</p>
+    <h1>Scholars of<br /><em>grief</em></h1>
+    <p class="hero-desc">
+      A curated directory of researchers and academics working on grief from a philosophical perspective.
+      Drawn from the <a href="https://www.griefyork.com/bibliography" target="_blank" rel="noopener">GriefYork bibliographical resource</a> — a comprehensive catalogue of philosophical works on grief and bereavement.
+    </p>
+  </div>
+</header>
+
+<div class="toolbar">
+  <div class="search-wrap">
+    <span class="search-icon">⌕</span>
+    <input type="text" id="search" placeholder="Search by name, institution, topic…" autocomplete="off" />
+  </div>
+  <div class="filters">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="phenomenology">Phenomenology</button>
+    <button class="filter-btn" data-filter="philosophy of mind">Philosophy of Mind</button>
+    <button class="filter-btn" data-filter="moral philosophy">Moral Philosophy</button>
+    <button class="filter-btn" data-filter="aesthetics">Aesthetics</button>
+    <button class="filter-btn" data-filter="comparative">Comparative</button>
+  </div>
+  <span class="count-badge" id="count">8 researchers</span>
+</div>
+
+<main>
+  <div class="grid" id="grid">
+    <!-- Cards injected by JS -->
+  </div>
+</main>
+
+<footer>
+  <span class="footer-left">"Grief is the price we pay for love."</span>
+  <span class="footer-right">
+    Sources: <a href="https://www.griefyork.com/bibliography" target="_blank">GriefYork Bibliography</a> · Compiled 2025
+  </span>
+</footer>
+
+<script>
+const researchers = [
+  {
+    name: "Michael Cholbi",
+    title: "Chair in Philosophy",
+    institution: "University of Edinburgh, UK",
+    areas: ["philosophy of mind", "moral philosophy"],
+    bio: "One of the leading philosophical voices on grief and bereavement, Cholbi authored the first book-length philosophical investigation of grief. His work spans the rationality of grief, its role in self-knowledge, and ethical dimensions of dying and loss. Founder of the International Association for the Philosophy of Death and Dying.",
+    website: "https://michael.cholbi.com",
+    publications: [
+      "Grief: A Philosophical Guide (Princeton UP, 2022)",
+      "Grief as Attention, Journal of Consciousness Studies (2022)",
+      "Grief's Rationality, Backward and Forward, Philosophy & Phenomenological Research (2017)",
+      "Regret, Resilience, and the Nature of Grief, Journal of Moral Philosophy (2018)",
+    ]
+  },
+  {
+    name: "Matthew Ratcliffe",
+    title: "Professor of Philosophy",
+    institution: "University of York, UK",
+    areas: ["phenomenology", "philosophy of mind"],
+    bio: "Principal investigator of the AHRC-funded 'Grief: A Study of Human Emotional Experience' project at York. Ratcliffe's phenomenological approach illuminates how grief restructures our experience of time, space, and possibility. His work bridges philosophy of psychiatry and embodied cognitive science.",
+    website: "https://www.york.ac.uk/philosophy/people/ratcliffe-matthew/",
+    publications: [
+      "Grief Worlds: A Study of Emotional Experience (MIT Press, 2022)",
+      "Towards a Phenomenology of Grief: Insights from Merleau-Ponty, European Journal of Philosophy (2020)",
+      "Grief and the Unity of Emotion, Midwest Studies in Philosophy (2017)",
+      "Sensed Presence without Sensory Qualities: Bereavement Hallucinations, Phenomenology & Cognitive Sciences (2021)",
+    ]
+  },
+  {
+    name: "Louise Richardson",
+    title: "Senior Lecturer in Philosophy",
+    institution: "University of York, UK",
+    areas: ["phenomenology", "philosophy of mind"],
+    bio: "Co-investigator on the York grief research project, Richardson works on philosophical questions about the object and structure of grief, absence experience, shared grief, and non-death losses. Her research also spans the philosophy of perception, especially smell and taste.",
+    website: "https://www.york.ac.uk/philosophy/people/louise-richardson/",
+    publications: [
+      "Absence Experience in Grief, European Journal of Philosophy (2023)",
+      "Grief over Non-Death Losses: A Phenomenological Perspective, Passion (2023)",
+      "On the Appropriateness of Grief to Its Object, Journal of the American Philosophical Association (2022)",
+      "The Covid-19 Pandemic and the Bounds of Grief, Think (2021)",
+    ]
+  },
+  {
+    name: "Becky Millar",
+    title: "Lecturer in Philosophy",
+    institution: "Cardiff University, UK",
+    areas: ["phenomenology", "philosophy of mind"],
+    bio: "Working in 4E (embodied, embedded, enactive, extended) philosophy of mind, Millar focuses on difficult-to-articulate experiences: the phenomenology of grief's impact on sensorimotor expectations, non-veridical bereavement experiences, and the role of smell in continuing bonds with the dead. Previously postdoctoral researcher at York.",
+    website: "https://www.beckymillar.com",
+    publications: [
+      "Grief's Impact on Sensorimotor Expectations, Phenomenology & Cognitive Sciences (2021)",
+      "Can Animals Grieve?, Ergo (2024)",
+      "Grief, Smell and the Olfactory Air of a Person (with Richardson), Pacific Philosophical Quarterly (2024)",
+      "Grief, Continuing Bonds, and Unreciprocated Love (with Lopez-Cantero), Southern Journal of Philosophy (2022)",
+    ]
+  },
+  {
+    name: "Svend Brinkmann",
+    title: "Professor of Psychology",
+    institution: "Aalborg University, Denmark",
+    areas: ["phenomenology", "moral philosophy"],
+    bio: "A philosopher-psychologist who directs the Culture of Grief research project at Aalborg. Brinkmann examines grief as a foundational emotion, the societal constitution of grief, its body-dimension, and the controversial pathologisation of grief in psychiatry. His book Grief: The Price of Love made philosophical grief research accessible to a wide audience.",
+    website: "https://vbn.aau.dk/en/persons/svendb/",
+    publications: [
+      "Grief: The Price of Love (Polity Press, 2020)",
+      "Could Grief Be a Mental Disorder?, Nordic Psychology (2018)",
+      "The Body in Grief, Mortality (2019)",
+      "A Society of Sorrow: The Constitution of Society through Grief, Distinktion (2019)",
+    ]
+  },
+  {
+    name: "Allan Køster",
+    title: "Senior Researcher",
+    institution: "National Center for Grief, Denmark & Copenhagen University Hospital",
+    areas: ["phenomenology"],
+    bio: "Trained as a philosopher with a PhD in psychology, Køster investigates the existential dimensions of grief from a phenomenological standpoint. His work explores longing, the felt sense of the other, self-alienation through bereavement, and the profound sense of emptiness grief can produce. Co-editor of a major Routledge volume on grief experience.",
+    website: "https://www.goodgrieffest.com/facilitators/dr-allan-koster/",
+    publications: [
+      "A Deeper Feeling of Grief, Journal of Consciousness Studies (2022)",
+      "Self-Alienation through the Loss of Heteronomy, Philosophical Explorations (2022)",
+      "Longing for Concreteness: Body Memory and Continuing Bonds, Mortality (2019)",
+      "The Felt Sense of the Other: Contours of a Sensorium, Phenomenology & Cognitive Sciences (2020)",
+    ]
+  },
+  {
+    name: "Kathleen Higgins",
+    title: "Professor of Philosophy",
+    institution: "University of Texas at Austin, USA",
+    areas: ["aesthetics", "phenomenology"],
+    bio: "Specialising in aesthetics, philosophy of music, and philosophy of emotion, Higgins explores how art — especially music — can aid the bereaved by regulating the existential feelings disrupted by grief. She examines the aesthetic practices woven through mourning: funerals, storytelling, listening, and memorialisation. Her late husband was philosopher Robert C. Solomon.",
+    website: "https://liberalarts.utexas.edu/philosophy/faculty/khiggins",
+    publications: [
+      "Aesthetics of Grief and Mourning (University of Chicago Press, 2024)",
+      "Aesthetics and the Containment of Grief, Journal of Aesthetics and Art Criticism (2020)",
+      "Music's Role in Relation to Phenomenological Aspects of Grief, Journal of Consciousness Studies (2022)",
+      "Love and Death. In On Emotions: Philosophical Essays (Oxford UP, 2013)",
+    ]
+  },
+  {
+    name: "Thomas Fuchs",
+    title: "Karl Jaspers Professor of Philosophy and Psychiatry",
+    institution: "Heidelberg University, Germany",
+    areas: ["phenomenology", "philosophy of mind"],
+    bio: "A psychiatrist and philosopher at the intersection of phenomenology, psychopathology, and embodied cognitive science. Fuchs's landmark paper on the phenomenology of grief identifies its core characteristic as a conflict between presence and absence of the deceased — a tension between two worlds the bereaved simultaneously inhabits.",
+    website: "https://www.uni-heidelberg.de/fiit/personen/fuchs_en.html",
+    publications: [
+      "Presence in Absence: The Ambiguous Phenomenology of Grief, Phenomenology & Cognitive Sciences (2018)",
+      "Grief, Melancholy, and Depression. In Grief Experience: Cultural, Existential and Phenomenological Perspectives (Routledge, 2021)",
+    ]
+  },
+  {
+    name: "Jelena Markovic",
+    title: "Postdoctoral Researcher",
+    institution: "Université Grenoble Alpes, France",
+    areas: ["phenomenology", "philosophy of mind"],
+    bio: "Working in empirically-informed philosophy of mind, Markovic examines grief as an unchosen transformative experience — one that alters a person's sense of what is significant in the world and compels reorganisation of the self as an agent. Her current project focuses on cultural bereavement and the grief of being uprooted from one's homeland.",
+    website: "https://markovicjelena.com",
+    publications: [
+      "Transformative Grief, European Journal of Philosophy (2024)",
+      "Unchosen Transformative Experiences and the Experience of Agency, Phenomenology & Cognitive Sciences (2022)",
+    ]
+  },
+];
+
+// ── Render ──────────────────────────────────────
+const grid = document.getElementById('grid');
+const searchInput = document.getElementById('search');
+const countBadge = document.getElementById('count');
+const filterBtns = document.querySelectorAll('.filter-btn');
+
+let activeFilter = 'all';
+let searchTerm = '';
+
+function renderCards() {
+  const filtered = researchers.filter(r => {
+    const matchesFilter = activeFilter === 'all' || r.areas.includes(activeFilter);
+    const haystack = [r.name, r.title, r.institution, r.bio, ...r.areas, ...r.publications].join(' ').toLowerCase();
+    const matchesSearch = !searchTerm || haystack.includes(searchTerm.toLowerCase());
+    return matchesFilter && matchesSearch;
+  });
+
+  grid.innerHTML = '';
+  countBadge.textContent = `${filtered.length} researcher${filtered.length !== 1 ? 's' : ''}`;
+
+  if (filtered.length === 0) {
+    grid.innerHTML = '<p class="no-results">No researchers found matching your query.</p>';
+    return;
+  }
+
+  filtered.forEach((r, i) => {
+    const card = document.createElement('div');
+    card.className = 'card';
+    card.style.animationDelay = `${i * 0.05}s`;
+
+    const tagHTML = r.areas.map(a =>
+      `<span class="tag">${a}</span>`
+    ).join('');
+
+    const pubHTML = r.publications.map(p =>
+      `<li>${p}</li>`
+    ).join('');
+
+    card.innerHTML = `
+      <div class="card-number">0${i < 9 ? '0' : ''}${i + 1}</div>
+      <div class="card-name">${r.name}</div>
+      <div class="card-title">${r.title}</div>
+      <div class="card-institution">${r.institution}</div>
+      <p class="card-bio">${r.bio}</p>
+      <div class="tags">${tagHTML}</div>
+      <div class="card-footer">
+        <div class="pubs-label">Selected Publications</div>
+        <ul class="pub-list">${pubHTML}</ul>
+        ${r.website ? `<a class="card-link" href="${r.website}" target="_blank" rel="noopener">Academic profile</a>` : ''}
+      </div>
+    `;
+    grid.appendChild(card);
+  });
+}
+
+// ── Events ──────────────────────────────────────
+searchInput.addEventListener('input', e => {
+  searchTerm = e.target.value;
+  renderCards();
+});
+
+filterBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    filterBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    activeFilter = btn.dataset.filter;
+    renderCards();
+  });
+});
+
+// ── Init ──────────────────────────────────────
+renderCards();
+</script>
+</body>
+</html>
